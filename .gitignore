@@ -1,0 +1,33 @@
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Machine Learning
+# Ignore huge pickle files to prevent GitHub rejection. 
+# Our tfidf.pkl is small enough to keep if needed, but definitely ignore cosine_sim.pkl
+cosine_sim.pkl
+*.joblib
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Node & Frontend
+node_modules/
+dist/
+build/
+.npm/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and Caches
+*.log
+.cache/

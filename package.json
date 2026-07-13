@@ -1,0 +1,10 @@
+{
+  "name": "voga",
+  "version": "2.0.0",
+  "description": "Premium AI Product Recommendation Platform",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "start-backend": "cd backend && ..\\.venv\\Scripts\\python.exe app.py",
+    "install-all": "cd frontend && npm install && cd ../backend && ..\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt"
+  }
+}
