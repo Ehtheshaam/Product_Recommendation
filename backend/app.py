@@ -16,6 +16,22 @@ CORS(app)
 # without recalculating the math.
 cache = Cache(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT': 300})
 
+@app.route('/')
+def health_check():
+    """
+    Root endpoint to confirm the API is online and prevent 404 errors on the base URL.
+    """
+    return jsonify({
+        "status": "online",
+        "service": "VOGA Machine Learning API",
+        "endpoints": [
+            "/api/products",
+            "/api/products/search?q=...",
+            "/api/recommendations/<id>",
+            "/api/stats"
+        ]
+    })
+
 @app.route('/api/products')
 def get_products():
     """
