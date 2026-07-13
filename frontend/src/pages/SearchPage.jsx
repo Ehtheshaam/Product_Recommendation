@@ -26,7 +26,7 @@ const SearchPage = () => {
 
   useEffect(() => {
     // Load some initial products
-    fetch('http://127.0.0.1:5001/api/products?limit=50')
+    fetch('https://voga-api.onrender.com/api/products?limit=50')
       .then(res => res.json())
       .then(data => setInitialProducts(data))
       .catch(err => console.error(err));
@@ -40,7 +40,7 @@ const SearchPage = () => {
     }
     
     setLoading(true);
-    fetch(`http://127.0.0.1:5001/api/products/search?q=${encodeURIComponent(query)}`)
+    fetch(`https://voga-api.onrender.com/api/products/search?q=${encodeURIComponent(query)}`)
       .then(res => res.json())
       .then(data => {
         setResults(data);

@@ -29,7 +29,7 @@ const LandingPage = () => {
 
     if (history.length > 0) {
       // Fetch personalized recommendations based on viewing history
-      fetch('http://127.0.0.1:5001/api/recommendations/personal', {
+      fetch('https://voga-api.onrender.com/api/recommendations/personal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ history })
@@ -44,7 +44,7 @@ const LandingPage = () => {
       .catch(err => console.error(err));
     } else {
       // Fallback to standard featured products (Cold Start problem solution)
-      fetch('http://127.0.0.1:5001/api/products?limit=3')
+      fetch('https://voga-api.onrender.com/api/products?limit=3')
         .then(res => res.json())
         .then(data => setProducts(data))
         .catch(err => console.error(err));

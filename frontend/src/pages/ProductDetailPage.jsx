@@ -23,7 +23,7 @@ const ProductDetailPage = () => {
   useEffect(() => {
     setLoading(true);
     // Fetch product details
-    fetch(`http://127.0.0.1:5001/api/products/${id}`)
+    fetch(`https://voga-api.onrender.com/api/products/${id}`)
       .then(res => res.json())
       .then(data => {
         setProduct(data);
@@ -42,7 +42,7 @@ const ProductDetailPage = () => {
         // ----------------------------------------
         
         // Fetch recommendations
-        return fetch(`http://127.0.0.1:5001/api/recommendations/${id}`);
+        return fetch(`https://voga-api.onrender.com/api/recommendations/${id}`);
       })
       .then(res => res.json())
       .then(data => {

@@ -7,7 +7,7 @@ const DashboardPage = () => {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5001/api/stats')
+    fetch('https://voga-api.onrender.com/api/stats')
       .then(res => res.json())
       .then(data => setStats(data))
       .catch(err => console.error(err));
